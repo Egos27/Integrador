@@ -27,7 +27,7 @@ namespace Entidades
             {
                 return (PelotaMala)pelota;
             }
-            return null;
+            throw new ChoqueException("Perdio");
         }
         public void Mover()
         {

@@ -26,7 +26,8 @@ namespace Entidades
             {
                 return (PelotaBuena)pelota;
             }
-            return null;
+            throw new ChoqueException("Se Termina el juego");
+
         }
         public int VelX { get { return velX; } set { velX = value; } }
         public int VelY { get { return velY; } set { velY = value; } }
@@ -65,10 +66,10 @@ namespace Entidades
 
 
 
-        public static List<PelotaBuena>BuscarBuenas(List<Pelota> pelotas)
+        public static List<PelotaBuena>BuscarBuenas()
         {
             List<PelotaBuena> buenas = new List<PelotaBuena>();
-            foreach (Pelota item in pelotas)
+            foreach (Pelota item in Juego.Pelotas)
             {
                 if (item is PelotaBuena)
                     buenas.Add((PelotaBuena)item);

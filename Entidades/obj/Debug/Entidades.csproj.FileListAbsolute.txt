@@ -4,3 +4,9 @@ C:\Users\Paola\source\repos\FinalProgramacionII\Entidades\obj\Debug\Entidades.cs
 C:\Users\Paola\source\repos\FinalProgramacionII\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Paola\source\repos\FinalProgramacionII\Entidades\obj\Debug\Entidades.dll
 C:\Users\Paola\source\repos\FinalProgramacionII\Entidades\obj\Debug\Entidades.pdb
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\bin\Debug\Entidades.dll
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\bin\Debug\Entidades.pdb
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.dll
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.pdb
