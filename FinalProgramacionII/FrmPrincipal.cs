@@ -14,37 +14,26 @@ namespace FinalProgramacionII
 {
     public partial class FrmPrincipal : Form
     {
-        private List<Pelota> pelotas;
-        private Thread hilo; 
+        private int reloj = 0;
         public FrmPrincipal()
         {
             InitializeComponent();
-            pelotas = new List<Pelota>();
-            inicilizarBlancas();
-            pelotas.Add(new PelotaMala());
-            pelotas.Add(new PelotaBuena());
-            Pelota.Ordernar(pelotas);
-            hilo = new Thread(Mover);
+           
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            hilo.Start();
-
+            timer1.Interval = 20;
+            timer1.Enabled = true;
+            
+            
         }
-
-        public void inicilizarBlancas()
-        {
-            for (int i = 0; i < 25; i++)
-            {
-                pelotas.Add(new PelotaNeutra());
-            }
-        }
+       
 
         private void FrmPrincipal_Paint(object sender, PaintEventArgs e)
         {
-            for (int i = 0; i < pelotas.Count; i++)
+            for (int i = 0; i < Juego.Pelotas.Count; i++)
                 {
-                    Pelota item = pelotas[i]; 
+                    Pelota item = Juego.Pelotas[i]; 
 
 
                 Pen pen = new Pen(Color.Green); ;
@@ -60,70 +49,39 @@ namespace FinalProgramacionII
         private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
 
-            List<PelotaBuena> buenas = PelotaBuena.BuscarBuenas(pelotas);
+            List<PelotaBuena> buenas = PelotaBuena.BuscarBuenas();
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    SetearVelocidad(buenas, true, -1);
+                    Juego.SetearVelocidad(buenas, true, -1);
                     break;
                 case Keys.Up:
-                    SetearVelocidad(buenas, false, -1);
+                    Juego.SetearVelocidad(buenas, false, -1);
                     break;
                 case Keys.Right:
-                    SetearVelocidad(buenas, true, 1);
+                    Juego.SetearVelocidad(buenas, true, 1);
                     break;
                 case Keys.Down:
-                    SetearVelocidad(buenas, false, 1);
+                    Juego.SetearVelocidad(buenas, false, 1);
                     break;
              }
         }
 
-        private void SetearVelocidad(List<PelotaBuena> pelotasACambiar,bool ejeX, int valor)
-        {
-            for (int i = 0; i < pelotasACambiar.Count; i++)
-            {
-                if(ejeX)
-                    pelotasACambiar[i].VelX = valor;
-                else
-                    pelotasACambiar[i].VelY = valor;
-            }
-        }
+        
 
-        private void Mover()
-        {
-            for (int i = 0; i < pelotas.Count; i++)
-            {
-                Pelota item = pelotas[i];
-            
-                if (item is IMovimiento)
-                {
-                    ((IMovimiento)item).Mover();
-                    ((IMovimiento)item).HayChoque(pelotas);
-                }
-            }
-
-            Thread.Sleep(20);
-            if (this.InvokeRequired)
-            {
-                this.BeginInvoke((MethodInvoker)delegate ()
-                {
-                    this.Refresh();
-                });
-            }
-            else
-            {
-            this.Refresh();
-
-            }
-            
-            Mover();
-        }
+       
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            hilo.Abort();
+            Juego.Hilo.Abort();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            reloj++;
+            label1.Text = reloj.ToString();
+            this.Refresh();
+        }
     }
 }

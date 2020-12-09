@@ -11,3 +11,16 @@ C:\Users\Paola\source\repos\FinalProgramacionII\FinalProgramacionII\obj\Debug\Fi
 C:\Users\Paola\source\repos\FinalProgramacionII\FinalProgramacionII\obj\Debug\FinalProgramacionII.csproj.CopyComplete
 C:\Users\Paola\source\repos\FinalProgramacionII\FinalProgramacionII\obj\Debug\FinalProgramacionII.exe
 C:\Users\Paola\source\repos\FinalProgramacionII\FinalProgramacionII\obj\Debug\FinalProgramacionII.pdb
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\bin\Debug\FinalProgramacionII.exe.config
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\bin\Debug\FinalProgramacionII.exe
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\bin\Debug\FinalProgramacionII.pdb
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\bin\Debug\Entidades.dll
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\bin\Debug\Entidades.pdb
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.csprojAssemblyReference.cache
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.FrmPrincipal.resources
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.Properties.Resources.resources
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.csproj.GenerateResource.cache
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.csproj.CoreCompileInputs.cache
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.csproj.CopyComplete
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.exe
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.pdb
