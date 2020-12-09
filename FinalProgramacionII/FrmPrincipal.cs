@@ -73,8 +73,11 @@ namespace FinalProgramacionII
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-            Juego.Hilo.Abort();
+            if (Juego.Hilo != null && Juego.Hilo.IsAlive)
+            {
+                Helper.Serializar(Juego.Pelotas)
+                 Juego.Hilo.Abort();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

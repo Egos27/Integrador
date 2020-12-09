@@ -1,0 +1,2 @@
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache

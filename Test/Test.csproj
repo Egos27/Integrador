@@ -49,11 +49,22 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Final.cs" />
+    <Compile Include="SegundoParcial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{7d85e872-a3ac-4160-aa14-93c3433e407a}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProgramacionII\FinalProgramacionII.csproj">
+      <Project>{94d45b2f-6361-4074-a552-30a3261fe8ee}</Project>
+      <Name>FinalProgramacionII</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

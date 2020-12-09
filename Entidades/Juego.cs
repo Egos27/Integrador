@@ -24,8 +24,7 @@ namespace Entidades
             InicilizarNeutras();
             pelotas.Add(new PelotaBuena());
             Pelota.Ordernar(pelotas);
-            //TEST
-            //Hilo = new Thread(Mover);
+            Hilo = new Thread(Mover);
         }
 
         public static void SetearVelocidad(List<PelotaBuena> pelotasACambiar, bool ejeX, int valor)

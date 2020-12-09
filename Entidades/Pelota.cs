@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public delegate void ColorDelegate();
+    
     public abstract class Pelota
     {
-        private event ColorDelegate CambiarColor;
+       
         protected int posX;
         protected int posY;
         protected int movX;
