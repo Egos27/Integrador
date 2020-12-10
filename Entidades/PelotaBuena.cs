@@ -26,7 +26,7 @@ namespace Entidades
             {
                 return (PelotaBuena)pelota;
             }
-            throw new ChoqueException("Se Termina el juego");
+            throw new Exception("Se Termina el juego");
 
         }
         public int VelX { get { return velX; } set { velX = value; } }

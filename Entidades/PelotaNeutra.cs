@@ -20,5 +20,10 @@ namespace Entidades
             this.posY = rnd.Next(1, MaximoY);
         }
 
+        public void Posicionar(int x , int y)
+        {
+            this.posX = x;
+            this.posY = y;
+        }
     }
 }

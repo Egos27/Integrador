@@ -27,7 +27,7 @@ namespace Entidades
             {
                 return (PelotaMala)pelota;
             }
-            throw new ChoqueException("Perdio");
+            throw new Exception("Perdio");
         }
         public void Mover()
         {
@@ -60,6 +60,12 @@ namespace Entidades
                 }
 
             }
+        }
+
+        public void Posicionar(int x, int y)
+        {
+            this.posX = x;
+            this.posY = y;
         }
 
     }

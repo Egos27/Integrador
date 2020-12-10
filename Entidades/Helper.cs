@@ -30,5 +30,15 @@ namespace Entidades
             throw new NotImplementedException("Punto no realizado");
 
         }
+
+        public static List<Jugador> BuscarEnlog()
+        {
+            throw new NotImplementedException("Punto no realizado");
+        }
+
+        public static void GuardarEnLog(Jugador jugador)
+        {
+            throw new NotImplementedException("Punto no realizado");
+        }
     }
 }

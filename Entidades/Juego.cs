@@ -24,9 +24,12 @@ namespace Entidades
             InicilizarNeutras();
             pelotas.Add(new PelotaBuena());
             Pelota.Ordernar(pelotas);
-            Hilo = new Thread(Mover);
-        }
 
+            //inicializar hilo con el metodo mover
+
+
+        }
+        #region NO_TOCAR
         public static void SetearVelocidad(List<PelotaBuena> pelotasACambiar, bool ejeX, int valor)
         {
             for (int i = 0; i < pelotasACambiar.Count; i++)
@@ -63,5 +66,6 @@ namespace Entidades
 
             Mover();
         }
+        #endregion
     }
 }

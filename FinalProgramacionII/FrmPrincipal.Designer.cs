@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnComenzar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -46,11 +47,23 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnComenzar
+            // 
+            this.btnComenzar.Location = new System.Drawing.Point(280, 121);
+            this.btnComenzar.Name = "btnComenzar";
+            this.btnComenzar.Size = new System.Drawing.Size(123, 53);
+            this.btnComenzar.TabIndex = 1;
+            this.btnComenzar.Text = "Empezar";
+            this.btnComenzar.UseVisualStyleBackColor = true;
+            this.btnComenzar.Click += new System.EventHandler(this.btnComenzar_Click);
+            this.btnComenzar.KeyDown += FrmPrincipal_KeyDown;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 445);
+            this.Controls.Add(this.btnComenzar);
             this.Controls.Add(this.label1);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
@@ -67,5 +80,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnComenzar;
     }
 }

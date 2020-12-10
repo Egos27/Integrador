@@ -24,3 +24,4 @@ C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\F
 C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.csproj.CopyComplete
 C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.exe
 C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.pdb
+C:\Users\eoggioni\Source\Repos\Egos27\Integrador\FinalProgramacionII\obj\Debug\FinalProgramacionII.FrmPuntos.resources

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class ChoqueException:Exception
+    public class ChoqueException
     {
-        public ChoqueException (string mensaje): base(mensaje) { }
+      
 
 
     }
