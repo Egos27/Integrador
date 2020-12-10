@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    //Crear un delegado
+    
+
     public static class Juego
     {
+        //Crear el evento del delegado
+        
+        #region NO_TOCAR
         private static List<Pelota> pelotas;
         public static List<Pelota> Pelotas
         {
@@ -17,6 +23,8 @@ namespace Entidades
         }
 
         public static Thread Hilo { get; set; }
+        #endregion
+
         static Juego()
         {
             pelotas = new List<Pelota>();
@@ -25,8 +33,8 @@ namespace Entidades
             pelotas.Add(new PelotaBuena());
             Pelota.Ordernar(pelotas);
 
-            //inicializar hilo con el metodo mover
-
+            //inicializar hilo con el metodo Juego.Mover
+            
 
         }
         #region NO_TOCAR
@@ -50,22 +58,47 @@ namespace Entidades
         }
         private static void Mover()
         {
+            int cantidadBuenas = PelotaBuena.BuscarBuenas().Count;
             for (int i = 0; i < pelotas.Count; i++)
             {
                 Pelota item = pelotas[i];
 
                 if (item is IMovimiento)
                 {
-                    ((IMovimiento)item).Mover();
-                    ((IMovimiento)item).HayChoque(pelotas);
+                    try
+                    {
+
+                        ((IMovimiento)item).Mover();
+                        ((IMovimiento)item).HayChoque(pelotas);
+                    }
+                    catch (Exception e)
+                    {
+                        return;
+                    }
                 }
             }
+            int NuevaCantidadBuenas = PelotaBuena.BuscarBuenas().Count;
+            #endregion
 
+            if (cantidadBuenas < NuevaCantidadBuenas)
+            {
+                int puntos = NuevaCantidadBuenas - cantidadBuenas;
+                puntos = puntos * 100;
+                //invocar el evento sumar puntos 
+                
+            }
 
+            #region NO_TOCAR
             Thread.Sleep(20);
 
             Mover();
         }
         #endregion
+
+        public static void ForzarInvocacionEvento()
+        {
+            //invocar el evento sumar puntos 
+
+        }
     }
 }

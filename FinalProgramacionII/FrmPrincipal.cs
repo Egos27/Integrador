@@ -27,7 +27,7 @@ namespace FinalProgramacionII
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             jugador.Nombre = Interaction.InputBox("Ingrese su nombre ", "Ingreso");
-            timer1.Interval = 20;
+            timer1.Interval = 50;
         }
 
 
@@ -86,15 +86,19 @@ namespace FinalProgramacionII
             label1.Text = reloj.ToString();
             this.Refresh();
         }
+        #endregion
 
         private void btnComenzar_Click(object sender, EventArgs e)
         {
             btnComenzar.Visible = false;
+            // agregar manejador evento
+          
             Juego.Hilo.Start();
+
             reloj = 0;
             timer1.Enabled = true;
         }
-        #endregion
+  
 
 
 

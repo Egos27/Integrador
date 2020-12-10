@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class PelotaBuena : Pelota, IMovimiento
     {
+        #region NO_TOCAR_NADA
         int velX = 1;
         int velY = 1;
 
@@ -26,8 +27,12 @@ namespace Entidades
             {
                 return (PelotaBuena)pelota;
             }
+            #endregion
+
+            //Cambiar por ChoqueException
             throw new Exception("Se Termina el juego");
 
+            #region NO_TOCAR_NADA
         }
         public int VelX { get { return velX; } set { velX = value; } }
         public int VelY { get { return velY; } set { velY = value; } }
@@ -76,5 +81,7 @@ namespace Entidades
             }
             return buenas;
         }
+
+        #endregion
     }
 }

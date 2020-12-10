@@ -13,12 +13,26 @@ namespace Test
     public class Final
     {
 
+
         [TestMethod]
         public void Nombre()
         {
             if (Environment.CurrentDirectory.Contains("Apellido"))
                 throw new Exception("Ponga su nombre en el proyexto");
         }
+
+
+        [TestMethod]
+        public void CrearPelota()
+        {
+            //Esta linea debe dar error de compilacion
+            Pelota pelota = new Pelota();
+            //esta no
+            Pelota pelota2 = new PelotaBuena();
+
+        }
+
+        
 
         [TestMethod]
         public void MoverPelotas()
@@ -74,6 +88,50 @@ namespace Test
             //Assert.AreEqual(PelotaBuena.BuscarBuenas(), Juego.Pelotas.BuscarBuenas());
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ChoqueException))]
+        public void Excepciones()
+        {
+            PelotaBuena buena = new PelotaBuena();
+            PelotaMala mala = new PelotaMala();
+            buena.Indice = 1;
+            mala.Posicionar(buena.PosX, buena.PosY);
+            mala.Indice = 0;
+            List<Pelota> pelotas = new List<Pelota>();
+            pelotas.Add(mala);
+            pelotas.Add(buena);
 
+            buena.HayChoque(pelotas);
+
+            Assert.Fail();
+
+        }
+
+        [TestMethod]
+
+
+        public void DelegadoEvento()
+        {
+            // Se debe crear el Delegado para poder crear
+            // el evento SumarPuntos en Juego que reciva un entero 
+            // con la cantidad de puntos a sumar; 
+            Jugador jug = new Jugador();
+            //Juego.SumarPuntos += jug.SumarPuntos;
+
+            Assert.IsTrue(true);
+        }
+
+        [TestMethod]
+        public void EjecutarEvento()
+        {
+            // Se debe crear el Delegado para poder crear
+            // el evento SumarPuntos en Juego que reciva un entero 
+            // con la cantidad de puntos a sumar; 
+            Jugador jug = new Jugador();
+            //Juego.SumarPuntos += jug.SumarPuntos;
+            Juego.ForzarInvocacionEvento();
+
+            Assert.AreNotEqual<int>(jug.Puntos, 0);
+        }
     }
 }

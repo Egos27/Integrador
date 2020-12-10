@@ -8,6 +8,9 @@ namespace Entidades
 {
     public class PelotaMala : Pelota, IMovimiento
     {
+
+        #region NO_TOCAR_NADA
+
         int velX = 1;
         int velY = 1;
 
@@ -27,7 +30,12 @@ namespace Entidades
             {
                 return (PelotaMala)pelota;
             }
+            #endregion
+            //Cambiar por ChoqueException
             throw new Exception("Perdio");
+
+
+        #region NO_TOCAR_NADA
         }
         public void Mover()
         {
@@ -67,6 +75,6 @@ namespace Entidades
             this.posX = x;
             this.posY = y;
         }
-
+        #endregion
     }
 }

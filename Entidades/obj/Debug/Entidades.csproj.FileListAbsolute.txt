@@ -10,3 +10,9 @@ C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.c
 C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.dll
 C:\Users\eoggioni\Source\Repos\Egos27\Integrador\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Paola\source\repos\Integrador\Entidades\bin\Debug\Entidades.dll
+C:\Users\Paola\source\repos\Integrador\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Paola\source\repos\Integrador\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Paola\source\repos\Integrador\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Paola\source\repos\Integrador\Entidades\obj\Debug\Entidades.dll
+C:\Users\Paola\source\repos\Integrador\Entidades\obj\Debug\Entidades.pdb

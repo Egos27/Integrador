@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Entidades
 {
     
-    public abstract class Pelota
+    public  class Pelota
     {
        
         protected int posX;

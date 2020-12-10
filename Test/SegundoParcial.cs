@@ -3,6 +3,7 @@ using System;
 using Entidades;
 using System.Threading;
 using System.Collections.Generic;
+using FinalProgramacionII;
 
 namespace Test
 {
@@ -15,10 +16,10 @@ namespace Test
         public void Nombre()
         {
             if (Environment.CurrentDirectory.Contains("Apellido"))
-                throw new Exception("Ponga su nombre en el proyexto"); 
+                throw new Exception("Ponga su nombre en el proyexto");
         }
 
-            [TestMethod]
+        [TestMethod]
         public void MoverPelotas()
         {
 
@@ -33,7 +34,7 @@ namespace Test
         [TestMethod]
         public void SerializarPelotas()
         {
-            
+
 
             string ruta = Helper.Serializar(Juego.Pelotas);
 
@@ -43,7 +44,7 @@ namespace Test
             //Hacer las modificaciones necesarias para serializar una pelota y que tambien pueda la lista
 
 
-            
+
         }
 
 
@@ -54,7 +55,7 @@ namespace Test
             jugador1.Nombre = "PruebaLog";
             jugador1.SumarPuntos(10);
             Helper.GuardarEnLog(jugador1);
-            List<Jugador> jugadores =   Helper.BuscarEnlog();
+            List<Jugador> jugadores = Helper.BuscarEnlog();
             foreach (Jugador item in jugadores)
             {
                 if (jugador1 == item)
@@ -87,9 +88,35 @@ namespace Test
 
             buena.HayChoque(pelotas);
 
+            Assert.Fail();
 
         }
 
+        [TestMethod]
 
+
+        public void DelegadoEvento()
+        {
+            // Se debe crear el Delegado para poder crear
+            // el evento SumarPuntos en Juego que reciva un entero 
+            // con la cantidad de puntos a sumar; 
+            Jugador jug = new Jugador();
+            //Juego.SumarPuntos += jug.SumarPuntos;
+
+            Assert.IsTrue(true);
+        }
+
+        [TestMethod]
+        public void EjecutarEvento()
+        {
+            // Se debe crear el Delegado para poder crear
+            // el evento SumarPuntos en Juego que reciva un entero 
+            // con la cantidad de puntos a sumar; 
+            Jugador jug = new Jugador();
+            //Juego.SumarPuntos += jug.SumarPuntos;
+            Juego.ForzarInvocacionEvento();
+
+            Assert.AreNotEqual<int>(jug.Puntos, 0);
+        }
     }
 }
